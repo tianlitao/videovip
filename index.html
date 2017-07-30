@@ -32,6 +32,11 @@
         if(r!=null)return  unescape(r[2]); return null;
       }
       $(function(){
+        if(GetQueryString("api") != null){
+          api = GetQueryString("api")
+          $('#jk').val(api)
+          dihejk()
+        }
         if(GetQueryString("url") != null){
           url = GetQueryString("url")
           $('#url').val(url)
@@ -50,8 +55,7 @@
         <strong>复制VIP会员视频的地址到↓↓↓↓↓栏中点击立即播放就行了！如果不能播放请在选择接口处更改接口!</strong></div>
     <div class="col-md-14 column">
         <form method="get">
-            <div class="input-group" style="width: 100%;"><span class="input-group-addon input-lg"
-                                                                style="width: 80px; ">选择接口</span><select
+            <div class="input-group" style="width: 100%;"><span class="input-group-addon input-lg" style="width: 80px; ">选择接口</span><select
                     class="form-control input-lg" id="jk">
                 <option value="http://api.47ks.com/webcloud/?v=" selected="">爱奇艺、腾讯优酷、乐视、搜狐</option>
                 <option value="http://api.wlzhan.com/sudu/?url=">通用vip会员接口1</option>
